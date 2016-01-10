@@ -47,7 +47,7 @@ if __name__ == '__main__':
 
     pattern_size = (9, 6)
     pattern_points = np.zeros((np.prod(pattern_size), 3), np.float32)
-    pattern_points[:, :2] = np.indices(pattern_size).T.reshape(-1, 2)
+    pattern_points[:, :2] = np.indices(pattern_size).T.reshape(-1, 2)#reshape中带负号是什么意思？ 20160110
     pattern_points *= square_size
 
     obj_points = []
