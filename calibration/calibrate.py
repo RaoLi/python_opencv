@@ -87,7 +87,12 @@ if __name__ == '__main__':
 
     # calculate camera distortion
     rms, camera_matrix, dist_coefs, rvecs, tvecs = cv2.calibrateCamera(obj_points, img_points, (w, h), None, None)
-
+    
+    # try to use the 3.1.0 function
+    # In this 3.1.0 version opencv_python tutorial:http://docs.opencv.org/3.1.0/dc/dbb/tutorial_py_calibration.html, 
+    # the example still uses the function above to calibrate the camera. 
+    # So my question is: do we actually have the 3.1.0-version camera calibration function for Python in Opencv?
+    
     print("\nRMS:", rms)
     print("camera matrix:\n", camera_matrix)
     print("distortion coefficients: ", dist_coefs.ravel())
